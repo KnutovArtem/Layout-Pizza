@@ -1,0 +1,15 @@
+# Ignoring directories
+/node_modules
+.idea
+
+# Ignoring files
+.Desctop.ini
+.desctop.ini
+//.babelrc
+//.bowerrc
+//.gitignore
+//.jshintrc
+//.npmrc
+//gulpfile.js
+//package.json
+//package-lock.json
