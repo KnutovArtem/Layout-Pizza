@@ -1,0 +1,92 @@
+/* -------------- Основной катаог товаров --------------*/
+.block-main-catalog 
+	height: 1500px
+	margin-bottom: 30px
+
+	// Блок промокода
+	.block-promo
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 50px
+		margin-bottom: 30px
+		
+		// Блок формы отправки промокода
+		.block-promo-form
+
+			// поле ввода
+			.input-promo
+				width: 200px
+				height: 30px
+				padding-left: 30px
+				border:
+					top: 1px solid $border 
+					left: 1px solid $border 
+					bottom: 1px solid $border 
+				border-radius: 50px 0 0 50px 
+
+			// Кнопка «Применить»
+			.button 
+				position: relative
+				left: -5px
+				width: 150px
+				height: 30px
+				border: 1px solid $c-but-1  
+				border-radius: 0 50px 50px 0 
+				color: $c-but-1  
+				cursor: pointer
+
+		// Блок оповещения (скрытый блок)
+		.block-alert  
+			text-align: center
+
+
+	// Блоки продуктов
+	.blocks-products
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		// Блок товра
+		.block-product 
+			width: 24%
+			height: auto
+			padding: 5px
+
+			// изображение товра
+			.product__images 
+				.product__image
+					width: 100% 
+					cursor: pointer 
+
+			%style__name__price
+				font:
+					family: $fontMaxi
+					size: $t-sz-aver 
+
+			// название товара
+			.product__name
+				@extend %style__name__price
+
+			// описание товара
+			.product__description  
+				color: $border 
+				height: 80px
+
+			// цена товара
+			.product__price 
+				float: left
+				@extend %style__name__price
+
+			// добавить в корзину
+			.product__this-choose 
+				border-radius: 5px
+				border: 1px solid $c-but-1 
+				color: $c-but-1 
+				text-align: center
+				float: right
+				padding: 5px 15px
+				cursor: pointer
+

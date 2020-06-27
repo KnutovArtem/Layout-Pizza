@@ -1,0 +1,60 @@
+
+/* -------------- Header сайта --------------*/
+.block-main-header 
+  display: flex
+  width: 100%
+  height: 80px
+  padding-top: 15px
+  padding-bottom: 15px
+  margin-bottom: 15px
+
+  ////////////////////  Блок логиотипа и текста
+  .block-main-logo 
+    display: flex
+
+    // Иконка логотипа
+    .icon-logo 
+      width: 45px
+      height: 45px
+      margin-right: 15px
+      background: url('../../img/logo.png')
+      background-size: 100%
+      background-repeat: no-repeat
+    
+    //////////////////// Блок текста к логотипу
+    .block-text-logo
+      display: flex
+      flex-direction: column
+
+      // НЯМ ПИЦЦА
+      .text-logo 
+        font-family: $fontLogo 
+        line-height: 1
+        font-size: 30px
+
+      // Сеть пиццерий №1 в Рязани
+      .dop-text-logo 
+        font-family: $fontMini
+        font-size: $t-sz-min 
+
+  //////////////////// Блок доставка
+  .main-header__block-delivery
+    flex-grow: 1
+    font-family: $fontMaxi
+    margin-left: 150px
+    span
+      color: $c-but-1  
+      cursor: pointer
+  
+  //////////////////// Вход в личный кабинет 
+  .account 
+    align-self: center
+    width: 100px
+    height: 30px
+    border: 1px solid $border 
+    border-radius: 50px
+    font-size: $t-sz-min 
+    cursor: pointer
+
+
+

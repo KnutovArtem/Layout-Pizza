@@ -1,0 +1,85 @@
+/* Slider
+  ------------------------------------- */
+.block-slider {
+  position: relative;
+  width: 100%;
+  min-height: 29vw;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  .block-slider-images {
+    width: 100%;
+
+    .slider-image {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      transition: opacity .55s ease-in-out;
+    }
+  }
+
+  .block-slider-conrol {
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+
+    // Arrows navigations
+    .block-control-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+
+      .next,
+      .prev {
+        width: 30px;
+        height: 30px;
+        background: url('../../img/arrow.svg') 50% 50%/100% no-repeat;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .prev {
+        transform: rotate(180deg);
+      }
+    }
+
+    // Dots
+    .block-control-dots {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      height: 30px;
+
+      .dot {
+        position: relative;
+        width: 14px;
+        height: 14px;
+        border-radius: 50px;
+        border: 3px solid #fff;
+        margin: 10px;
+        cursor: pointer;
+
+        .dot-active {
+          &::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: $colorMainText;
+            border-radius: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+

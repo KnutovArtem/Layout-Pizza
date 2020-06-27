@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Ням пицца</title>
+    <meta name='description' content=''>
+    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+    <link rel='stylesheet' href='css/main.min.css'>
+</head>
+
+<body>
+<div class='wrapper'>
+
+    <div class='modal-window__card-product'>
+        <div class='card-product'>
+
+            <div class='block-images'>
+                <img src='img/catalog/product_01.png' alt='пицца' class='img__card-product'>
+            </div>
+
+            <div class='block-content'>
+                <div class='block-content__nut_value'></div>
+
+                <p class='block-content__header'>Пепперони Фреш с перцем</p>
+                <p class='block-content__description'>25 см, традиционное тесто, 400 г</p>
+
+                <div class='block-content__composition'>
+                    <button class='ingredient ing-num-1 active-ingredient'>Пикантная пепперони</button>
+                    <button class='ingredient ing-num-2 active-ingredient'>Томатный соус</button>
+                    <button class='ingredient ing-num-3 active-ingredient'>Томатный соус</button>
+                    <button class='ingredient ing-num-4 active-ingredient'>Сладкий перец</button>
+                    <button class='ingredient ing-num-5'>Моцарелла</button>
+                    <button class='ingredient ing-num-6'>Острый халапеньо</button>
+                </div>
+
+                <div class='block-content__size'>
+                    <form class='wrapper-pizza '>
+                        <!-- active button -->
+                        <div class='active_but-size but_style'></div>
+                        <!-- button «little» -->
+                        <input type='radio' name='radio' class='radio' id='radio1'>
+                        <label for='radio1' class='label size-min label-size active'></label>
+                        <!-- button «average»-->
+                        <input type='radio' name='radio' class='radio' id='radio2'>
+                        <label for='radio2' class='label size-average label-size'></label>
+                        <!-- button «big» -->
+                        <input type='radio' name='radio' class='radio' id='radio3' checked>
+                        <label for='radio3' class='label size-max label-size'></label>
+                    </form>
+                </div>
+
+                <div class='block-content__view'>
+                    <form class='wrapper-pizza '>
+                        <div class='active_but-view but_style'></div>
+                        <input type='radio' name='radio' class='radio' id='radio4'>
+                        <label for='radio4' class='label tradition label-view'></label>
+                        <input type='radio' name='radio' class='radio' id='radio5'>
+                        <label for='radio5' class='label thin label-view'></label>
+                    </form>
+                </div>
+
+                <div class='block-content__add'>
+                    <div class='block-content-add__title'>Добавить в пиццу</div>
+                    <form class='block-content-add__wrapper '>
+                        <div class='block-content-add__card-add-ingredient active-ingredient'>
+                            <input class='checkbox' id='checkbox1' name='checkbox' type='checkbox'>
+                            <label for='checkbox1' class='label_add-ingredient'> <img class='add-ingredient__images' src='img/add-ingredient/becon_90x90.png' alt='Бекон'> <span class='add-ingredient__title'>Бекон</span> <span class='add-ingredient__price'><b>29</b> ₽</span> </label>
+                        </div>
+                        <input class='checkbox' id='checkbox2' name='checkbox' type='checkbox'>
+                        <label for='checkbox2' class='label_add-ingredient'></label>
+                        <input class='checkbox' id='checkbox3' name='checkbox' type='checkbox'>
+                        <label for='checkbox3' class='label_add-ingredient'>ы</label>
+                    </form>
+                </div>
+
+                <button class='block-content__to_cart'>Добавить в корзину за <span>2000</span> ₽</button>
+
+            </div>
+
+            <div class='close'></div>
+
+        </div>
+    </div><!-- End modal-window__card-product -->
+
+    <!-- Container header -->
+    <div class='container'>
+        <div class='block-main-header'>
+            <div class='block-main-logo'>
+                <div class='icon-logo'></div>
+                <div class='block-text-logo'>
+                    <div class='text-logo'>НЯМ ПИЦЦА</div>
+                    <div class='dop-text-logo'>Сеть пиццерий в Рязани</div>
+                </div>
+            </div>
+            <div class='main-header__block-delivery'><p>Доставка пиццы</p> за 30 мин - <span>4.83</span></div>
+            <button class='account'>Войти</button>
+        </div>
+    </div><!-- End container header -->
+
+    <div class='block-main-menu'>
+        <div class='container'>
+
+            <div class='block-menu-logo'>
+                <div class='menu-logo'></div>
+            </div>
+
+            <ul class='main-menu'>
+                <li class='main-menu__item'>Пиццы</li>
+                <li class='main-menu__item'>Комбо</li>
+                <li class='main-menu__item'>Закуски</li>
+                <li class='main-menu__item'>Десерты</li>
+                <li class='main-menu__item'>Напитки</li>
+                <li class='main-menu__item'>Акции</li>
+                <li class='main-menu__item'>Контакты</li>
+                <li class='main-menu__item'>Работа в</li>
+                <li class='main-menu__item'>О нас</li>
+            </ul>
+
+            <div class='basket'>Корзина</div>
+
+        </div>
+    </div><!-- End block-main-menu -->
+
+    <div class='block-slider'>
+        <div class='block-slider-images'>
+            <img class='slider-image active-slider' src='img/slider/images-slider-01.jpg' alt=''> <img class='slider-image' src='img/slider/images-slider-02.jpg' alt=''> <img class='slider-image' src='img/slider/images-slider-03.jpg' alt=''>
+        </div>
+        <div class='block-slider-control'>
+            <div class='block-control-nav'>
+                <div class='prev'></div>
+                <div class='next'></div>
+            </div>
+            <div class='block-control-dots'></div>
+        </div>
+    </div>
+
+    <div class='block-main-catalog'>
+        <div class='container'>
+
+            <div class='block-promo'>
+                <div class='block-promo-form'>
+                    <input class='input-promo' type='text' placeholder='Введите промокод'>
+                    <button class='button'>Применить</button>
+                </div>
+                <div class='block-alert'></div>
+            </div>
+
+            <div class='blocks-products'></div>
+
+        </div>
+    </div>
+
+</div><!-- End Wrapper -->
+
+<script src='js/script.min.js'></script>
+</body>
+</html>
+

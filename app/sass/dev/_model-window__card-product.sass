@@ -1,0 +1,288 @@
+/*  Модальное окно карточки товара */
+.modal-window__card-product
+	position: fixed
+	//display: flex
+	display: none
+	justify-content: center
+	align-items: center
+	width: 100vw
+	height: 100vh
+	background: rgba(0,0,0,0.7)
+	z-index: 100
+
+	// карточка товара
+	.card-product
+		position: relative
+		display: flex
+		width: 880px
+		height: 80vh
+		padding: 30px 30px 30px 0
+		border-radius: 15px
+		background: #fff
+		z-index: 101
+
+		// блок изображения
+		.block-images
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-basis: 60%
+			height: 100%
+			background: url('../../img/catalog/contur.png') 50% 50% no-repeat
+			background-size: 100%
+
+			// изображение
+			.img__card-product
+				width: 65%
+				height: auto
+				transition: all 0.7s ease 0.1s
+
+		// блок контент
+		.block-content
+			display: flex
+			flex-direction: column
+			flex-basis: 40%
+
+			// заголовок
+			.block-content__header
+				font-family: $fontMaxi
+				font-size: $t-sz-aver
+
+			// описание
+			.block-content__description
+				color: $border
+				margin-bottom: 15px
+
+			// состав
+			.block-content__composition
+				margin-bottom: 15px
+
+				// Ингредиент
+				.ingredient
+					padding: 10px 15px 0 0
+					color: $c-but-1
+
+				// Ингредиент который можно удалить
+				.active-ingredient,
+				.deactive-ingredient
+					position: relative
+					padding-right: 35px
+					cursor: pointer
+					&::before
+						content: '+'
+						position: absolute
+						top: 7px
+						right: 10px
+						width: 20px
+						height: 20px
+						border-radius: 50px
+						border: 1px solid $c-but-1
+						line-height: 1.2
+						font-size: 15px
+					&:hover
+						padding:
+							right: 45px
+						transition: all 0.4s ease 0.1s
+						text-decoration: line-through
+					&:hover::before
+						border: 1px solid $c-but-1
+						transition: all 0.2s
+						color: $c-but-1
+						width: 30px
+						height: 30px
+						top: 2px
+						right: 5px
+						line-height: 2
+
+				.active-ingredient
+					&::before
+						transform: rotate(45deg)
+
+				.deactive-ingredient
+					text-decoration: line-through
+					color: $border
+					&::before
+						border: 1px solid $border
+						transform: rotate(0deg)
+
+			// размер
+			.block-content__size,
+			.block-content__view
+				display: flex
+				align-content: center
+				justify-content: space-between
+				width: 100%
+				height: 40px
+				border-radius: 5px
+				margin-bottom: 15px
+				background: #f0f1f4
+
+				.wrapper-pizza
+					display: flex
+					align-items: center
+					position: relative
+					width: 100%
+
+					// стилизаця активной кнопки
+					.but_style
+						position: absolute
+						left: 0
+						width: 32%
+						height: 80%
+						background: #fff
+						box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1)
+						border-radius: 5px
+						transition: all 0.5s ease 0s
+
+					// Стилизация кнопок
+					.radio[type="radio"]
+						display: none
+
+					.label-size,
+					.label-view
+						position: relative
+						display: flex
+						justify-content: center
+						align-items: center
+						height: 50px
+						cursor: pointer
+
+					.label-size
+						width: 33.33%
+					.label-view
+						width: 50%
+
+					.size-min,
+						&::before
+							content: 'Маленькая'
+					.size-average,
+						&::before
+							content: 'Средняя'
+					.size-max
+						&::before
+							content: 'Большая'
+
+					.tradition
+						&::before
+							content: 'Традиционное'
+					.thin
+						&::before
+							content: 'Тонкое'
+
+			.block-content__size
+				.wrapper-pizza
+					.but_style
+						width: 32%
+
+			.block-content__view
+				.wrapper-pizza
+					.but_style
+						width: 50%
+
+			// добавить в состав
+			.block-content__add
+				margin-bottom: 15px
+				flex-basis: 40%
+
+				// заголовок
+				.block-content-add__title
+					font-family: $fontMaxi
+					font-size: $t-sz-aver
+
+				// блок кнопок
+				.block-content-add__wrapper
+					display: flex
+					justify-content: space-between
+					align-items: center
+					height: 80%
+
+					// карточка «добавить ингредиент»
+					.block-content-add__card-add-ingredient
+						position: relative
+						// Стилизация кнопок
+						.checkbox[type="checkbox"]
+							display: none
+
+						// блок кнопки
+						.label_add-ingredient
+							position: relative
+							display: flex
+							flex-wrap: wrap
+							width: 100px
+							height: 70%
+							padding: 0 10px 10px 10px
+							border-radius: 5px
+							box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1)
+							cursor: pointer
+							&::before
+								content: '+'
+								position: absolute
+								bottom: 15px
+								right: 5px
+								width: 25px
+								height: 25px
+								border-radius: 50px
+								background: $c-but-1
+								color: #fff
+								font-size: 20px
+								text-align: center
+								line-height: 1.3
+
+							// изображение
+							.add-ingredient__images
+								position: relative
+								top: -15px
+								width: 60px
+								height: 60px
+								margin: 0 auto
+
+							// заголовок
+							.add-ingredient__title
+								width: 100%
+
+							//стоимость
+							.add-ingredient__price
+								font-family: $fontMaxi
+
+						// стилизаия checkbox
+						.checkbox[type="checkbox"]:checked + .label_add-ingredient
+							&::before
+								transform: rotate(45deg)
+								transition: all 0.5s ease 0s
+								background: $border
+
+			// кнопка «в корзину»
+			.block-content__to_cart
+				align-self: flex-start
+				width: 100%
+				padding: 15px
+				background: $c-but-1
+				border-radius: 5px
+				color: #fff
+				font-family: $fontMaxi
+				cursor: pointer
+				font-size: 16px
+
+		// крестик
+		.close
+			position: absolute
+			top: 0
+			right: -45px
+			width: 30px
+			height: 30px
+			cursor: pointer
+			&::after,
+			&::before
+				content: ''
+				position: absolute
+				top: 15px
+				right: 0
+				width: 30px
+				height: 3px
+				background: #ffff
+			&::after
+				transform: rotate(45deg)
+			&::before
+				transform: rotate(-45deg)
+
+
